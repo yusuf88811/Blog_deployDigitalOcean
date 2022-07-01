@@ -33,7 +33,7 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=yusuf123
     volumes:
-      - .:/app
+      - .:/code
 
   
   app:
