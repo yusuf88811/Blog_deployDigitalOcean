@@ -4,7 +4,7 @@ version: '3'
 services:
   app:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: python manage.py runserver 
     depends_on:
       - db
     ports:
@@ -13,7 +13,7 @@ services:
       - .env
 
   db:
-    image: postgres:11-alpine
+    image: postgres:9.6
     environment:
       - NAME=new_blog-02
       - USER=postgres
