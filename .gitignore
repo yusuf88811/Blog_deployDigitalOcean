@@ -1,0 +1,5 @@
+new_blog-02
+.idea
+.env
+__pycache__
+*.pyc
