@@ -14,11 +14,11 @@ services:
   db:
     image: postgres:9.6
     environment:
-      - POSTGRES=new_blog-02
+      - NAME=new_blog-02
       - USER=postgres
       - PASSWORD=yusuf123
 
     volumes:
       - .:/code
-      
+
 
