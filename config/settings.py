@@ -12,11 +12,14 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 from pathlib import Path
 
-import whitenoise.storage
-from environs import Env
+# import whitenoise.storage
+# from environs import Env
+from dotenv import load_dotenv
 
-env = Env()
-env.read_env()
+load_dotenv()
+
+# env = Env()
+# env.read_env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,9 +28,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env.str("SECRET_KEY")
+SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool("DEBUG", default=False)
+DEBUG = os.environ.get("DEBUG", default=False)
 
 ALLOWED_HOSTS = ['.herokuapp.com', '127.0.0.1']
 
@@ -92,9 +95,9 @@ DATABASES = {
         'NAME': 'new_blog-02',
         # "USER": "postgres",
         # "PASSWORD": "yusuf123",
-        'USER': env.str("USER"),
-        'PASSWORD': env.str("PASSWORD"),
-        'HOST': env.str("HOST"),
+        'USER': os.environ.get("USER"),
+        'PASSWORD': os.environ.get("PASSWORD"),
+        'HOST': os.environ.get("HOST"),
         'PORT': '5432',
     }
 }
