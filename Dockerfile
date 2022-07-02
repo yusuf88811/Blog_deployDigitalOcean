@@ -13,6 +13,6 @@ RUN pip install -r requirements.txt
 
 EXPOSE 8000
 
-COPY entrypoint.sh .
-ENTRYPOINT [ "sh", "./entrypoint.sh" ] 
+COPY entrypoint.sh /code
+ENTRYPOINT [ "sh", "/code/entrypoint.sh" ] 
 
