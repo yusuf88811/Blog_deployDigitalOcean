@@ -3,6 +3,7 @@ FROM python:3.10.5
 RUN apt-get update \
     && apt-get install -yyq netcat
 
+ADD . /code
 WORKDIR /code
 COPY requirements.txt ./code
 COPY . .
