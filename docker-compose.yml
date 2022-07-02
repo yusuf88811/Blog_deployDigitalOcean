@@ -27,9 +27,9 @@
 version: "3.8"
 
 services:
-  pgdb:
+  newdb:
     image: postgres:10
-    container_name: pgdb
+    container_name: newdb
     environment:
       - POSTGRES_DB=new_blog-02
       - POSTGRES_USER=postgres
@@ -42,7 +42,7 @@ services:
     container_name: Blog
     #command: python manage.py runserver 0.0.0.0:8000
     depends_on:
-      - pgdb
+      - newdb
     ports:
       - "8000:8000"
     env_file:
