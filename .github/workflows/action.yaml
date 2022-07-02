@@ -20,7 +20,7 @@ jobs:
           cd ~
           cd Blog_deployDigitalOcean
           git pull
-          docker-compose down -v
+          docker-compose down
           docker-compose build
           docker-compose up
           
