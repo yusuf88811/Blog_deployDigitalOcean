@@ -21,7 +21,6 @@ jobs:
           cd Blog_deployDigitalOcean
           git pull
           docker-compose down
-          docker-compose build
-          docker-compose up
+          docker-compose up -d --build
           
           
