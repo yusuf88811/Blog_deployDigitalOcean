@@ -31,7 +31,7 @@ services:
     image: postgres:10
     container_name: newdb
     environment:
-      - POSTGRES_DB=new_blog-02
+      - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=yusuf123
     volumes:
